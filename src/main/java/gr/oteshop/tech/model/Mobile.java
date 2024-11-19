@@ -1,10 +1,7 @@
 package gr.oteshop.tech.model;
 
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 import lombok.Data;
 
 import java.math.BigDecimal;
@@ -16,7 +13,8 @@ public class Mobile {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String name;
-    private String type;
+    @ManyToOne
+    private Brand brand;
     private String model;
     private String color;
     private BigDecimal price;
