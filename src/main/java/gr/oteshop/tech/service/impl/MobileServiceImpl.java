@@ -1,7 +1,8 @@
-package gr.oteshop.tech.service;
+package gr.oteshop.tech.service.impl;
 
 import gr.oteshop.tech.model.Mobile;
 import gr.oteshop.tech.repository.MobileRepository;
+import gr.oteshop.tech.service.MobileService;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
 
@@ -10,7 +11,7 @@ import java.util.Optional;
 
 @Service
 @AllArgsConstructor
-public class MobileServiceImpl implements MobileService{
+public class MobileServiceImpl implements MobileService {
     private final MobileRepository mobileRepository;
 
     @Override
